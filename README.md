@@ -21,9 +21,7 @@ You will have new plugin available in Jellyfin. Just activate 'Providers ID Item
 
 ### Jellyfin Stremio Addon
 
-Additionally Stremio addon should be installed in your local environment (requires Docker).
-
-To install it:
+Jellyfin Stremio addon should be installed in your local docker environment. To install it pull latest docker addon image:
 
 `docker pull ghcr.io/akarazniewicz/stremio-jellyfin:latest`
 
