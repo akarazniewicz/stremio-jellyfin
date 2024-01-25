@@ -35,7 +35,7 @@ where:
 * `60421` - is standard port addon is running on (You may remap it in docker)
 * `<your jellyfin username>` - Jellyfin username
 * `<your jellyfin user password>` - Jellyfin password
-* `<your jellyfin server address>` - Jellifin server address and port (`http://aaa.bbb.ccc.ddd:eee`). Make sure Jellyfin is connectable.
+* `<your jellyfin server address>` - Jellyfin server address and port (`http://aaa.bbb.ccc.ddd:eee`). Make sure Jellyfin is connectable.
 
 You can run it in Your docker environment (like Rancher or Unraid).
 
