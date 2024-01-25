@@ -26,7 +26,7 @@ To install it:
 `
 and then
 
-`docker run ghcr.io/akarazniewicz/stremio-jellyfin -p 60421:60421 -e JELLYFIN_USER="<your jellyfin username>" -e JELLYFIN_PASSWORD="<your jellyfin user password>" -e JELLYFIN_SERVER="<your jellyfin server address>"
+`docker run -p 60421:60421 -e JELLYFIN_USER="<your jellyfin username>" -e JELLYFIN_PASSWORD="<your jellyfin user password>" -e JELLYFIN_SERVER="<your jellyfin server address> ghcr.io/akarazniewicz/stremio-jellyfin"
 `
 
 Afterwards, add the manifest to Stremio from:
