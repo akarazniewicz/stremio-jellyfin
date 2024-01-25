@@ -10,6 +10,7 @@ const itemsLimit = 20
 export class JellyfinApi {
 
     async authenticate() {
+        console.log(`Connecting to Jellyfin server: ${server} with username: ${user} and password: ${password}`)
         this.auth = await axios.post(`${server}/Users/authenticatebyname`,
             {Username: user, Pw: password}, {
                 headers: {
@@ -17,6 +18,16 @@ export class JellyfinApi {
                     'X-Emby-Authorization': `MediaBrowser Client="Jellyfin Stremio Addon", Device="${device}", DeviceId="${device}", Version="1.0.0.0""`
                 }
             }).then(it => it.data)
+            .catch(err => {
+                if (err?.response) {
+                    console.log(`Error caught while Jellyfin authentication, server response: ${err?.response?.code} (server: ${server} with username: ${user} and password: ${password})`)
+                } else {
+                    console.log(`Error connecting to Jellyfin (server: ${server} with username: ${user} and password: ${password})`)
+                    // anything else
+                }
+                console.info("Exiting. Please check your configuration and Jellyfin connection.")
+                process.exit()
+            })
 
         this.authorisationHeader = `MediaBrowser Client="Jellyfin Stremio Addon", Device="${device}", DeviceId="${device}", Version="1.0.0.0", Token="${this.auth.AccessToken}"`
     }
