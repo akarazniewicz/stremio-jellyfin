@@ -1,6 +1,6 @@
 # Stremio Jellyfin Addon
 
-An Stremio addon that enables streaming movies and TV series from your own Jellyfin server. Addon runs entirely locally, ensuring that none of your data is shared outside of your own network. It provides Stremio with a 'library' featuring your Jellyfin movies and TV series collection, allowing you to stream seamlessly both movies and series to your favorite Stremio player.
+[Stremio](https://www.stremio.com/) addon that enables streaming movies and TV series from your own Jellyfin server. Addon runs entirely locally, ensuring that none of your data is shared outside of your own network. It provides Stremio with a 'library' featuring your Jellyfin movies and TV series collection, allowing you to stream seamlessly both movies and series to your favorite Stremio player.
 
 ![](assets/si.png)
 
@@ -16,6 +16,8 @@ To install [it](https://github.com/akarazniewicz/jellyfin-providersid-search-plu
 https://raw.githubusercontent.com/akarazniewicz/jellyfin-providersid-search-plugin/main/manifest.json
 
 You will have new plugin available in Jellyfin. Just activate 'Providers ID Items Search API' plugin.
+
+![](assets/jp.png)
 
 ### Jellyfin Stremio Addon
 
@@ -37,6 +39,6 @@ where:
 
 You can run it in Your docker environment (like Rancher or Unraid).
 
-Afterwards, add the manifest to Stremio from:
+Finally, add the manifest to Stremio to install this addon:
 
 `http://<your docker host>:60421/manifest.json`
