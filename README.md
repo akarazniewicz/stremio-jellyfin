@@ -6,7 +6,7 @@
 
 ## Installation
 
-This addon This addon consists of two parts: Stremio Addon and supporting Jellyfin Extension adding Jellyfin search 
+This addon consists of two parts: Stremio Addon and supporting Jellyfin Extension adding Jellyfin search 
 capability using IMDB identifiers. Both components are required.
 
 ### Jellyfin Stremio Companion Plugin
