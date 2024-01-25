@@ -1,0 +1,14 @@
+{
+	"name": "stremio-addon-stremiojellyfin",
+	"version": "0.0.1",
+	"description": "Stremio Jellyfin Integration",
+	"type": "module",
+	"scripts": {
+		"start": "node server.js"
+	},
+	"dependencies": {
+		"axios": "^1.6.5",
+		"es6-promise": "^4.2.8",
+		"stremio-addon-sdk": "1.1.x"
+	}
+}
