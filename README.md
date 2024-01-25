@@ -2,7 +2,7 @@
 
 An Stremio addon that enables streaming movies and TV series from your own Jellyfin server. Addon runs entirely locally, ensuring that none of your data is shared outside of your own network. It provides Stremio with a library featuring your Jellyfin movie and TV series collection, allowing you to play both movies and series.
 
-![](assets\si.png)
+![](assets/si.png)
 
 ## Installation
 ### Jellyfin Stremio Companion Plugin
