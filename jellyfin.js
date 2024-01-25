@@ -20,7 +20,7 @@ export class JellyfinApi {
             }).then(it => it.data)
             .catch(err => {
                 if (err?.response) {
-                    console.log(`Error caught while Jellyfin authentication, server response: ${err?.response?.code} (server: ${server} with username: ${user} and password: ${password})`)
+                    console.log(`Error caught while Jellyfin authentication, server response: ${err?.response} (server: ${server} with username: ${user} and password: ${password})`)
                 } else {
                     console.log(`Error connecting to Jellyfin (server: ${server} with username: ${user} and password: ${password})`)
                     // anything else
@@ -28,7 +28,7 @@ export class JellyfinApi {
                 console.info("Exiting. Please check your configuration and Jellyfin connection.")
                 process.exit()
             })
-
+        console.log(`Successfully connected to Jellyfin server: ${server}.`)
         this.authorisationHeader = `MediaBrowser Client="Jellyfin Stremio Addon", Device="${device}", DeviceId="${device}", Version="1.0.0.0", Token="${this.auth.AccessToken}"`
     }
 
