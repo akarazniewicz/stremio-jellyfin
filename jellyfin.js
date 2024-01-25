@@ -20,9 +20,9 @@ export class JellyfinApi {
             }).then(it => it.data)
             .catch(err => {
                 if (err?.response) {
-                    console.log(`Error caught while Jellyfin authentication, server response: ${err?.response?.status} and data: ${err?.response?.data} (server: ${server} with username: ${user} and password: ${password})`)
+                    console.log(`Error caught while Jellyfin authentication, server response: ${err?.response?.status} and data: ${err?.response?.data || "<empty>" } (server: ${server} with username: ${user} and password: ${password})`)
                 } else {
-                    console.log(`Error connecting to Jellyfin (server: ${server} with username: ${user} and password: ${password}). Error message: ${error.message}`)
+                    console.log(`Error connecting to Jellyfin (server: ${server} with username: ${user} and password: ${password}). Error message: ${err?.message}`)
                     // anything else
                 }
                 console.info("Exiting. Please check your configuration and Jellyfin connection.")
