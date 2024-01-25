@@ -35,7 +35,7 @@ where:
 * `<your jellyfin user password>` - Jellyfin password
 * `<your jellyfin server address>` - Jellyfin server address and port (`http://aaa.bbb.ccc.ddd:eee`). Make sure Jellyfin is connectable.
 
-You can run it in Your docker environment (like Rancher or Unraid).
+You can run it in Your docker orchestrator too (like Rancher or Unraid).
 
 Finally, add the manifest to Stremio to install this addon:
 
