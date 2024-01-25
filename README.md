@@ -1,20 +1,21 @@
 # Stremio Jellyfin Addon
 
-An Stremio addon that enables streaming movies and TV series from your own Jellyfin server. Addon runs entirely locally, ensuring that none of your data is shared outside of your own network. It provides Stremio with a library featuring your Jellyfin movie and TV series collection, allowing you to play both movies and series.
+An Stremio addon that enables streaming movies and TV series from your own Jellyfin server. Addon runs entirely locally, ensuring that none of your data is shared outside of your own network. It provides Stremio with a 'library' featuring your Jellyfin movies and TV series collection, allowing you to stream seamlessly both movies and series to your favorite Stremio player.
 
 ![](assets/si.png)
 
 ## Installation
+
+This addon This addon consists of two parts: Stremio Addon and supporting Jellyfin Extension adding Jellyfin search 
+capability using IMDB identifiers. Both components are required.
+
 ### Jellyfin Stremio Companion Plugin
 
-This addon requires supporting Jellyfin extension that allows searching for movies and TV series using IMDB identifiers.
-You can find this addon [here](https://github.com/akarazniewicz/jellyfin-providersid-search-plugin).
-
-To install it, simply add following, new addon repository (`Jellyfin > Dashboard > Plugins > Repositories`):
+To install [it](https://github.com/akarazniewicz/jellyfin-providersid-search-plugin), simply add following, new addon repository to Jellyfin (`Jellyfin > Dashboard > Plugins > Repositories`):
 
 https://raw.githubusercontent.com/akarazniewicz/jellyfin-providersid-search-plugin/main/manifest.json
 
-Then install the new addon: Providers ID Items Search API.
+You will have new plugin available in Jellyfin. Just activate 'Providers ID Items Search API' plugin.
 
 ### Jellyfin Stremio Addon
 
@@ -22,12 +23,19 @@ Additionally Stremio addon should be installed in your local environment (requir
 
 To install it:
 
-`docker pull ghcr.io/akarazniewicz/stremio-jellyfin:latest
-`
-and then
+`docker pull ghcr.io/akarazniewicz/stremio-jellyfin:latest`
 
-`docker run -p 60421:60421 -e JELLYFIN_USER="<your jellyfin username>" -e JELLYFIN_PASSWORD="<your jellyfin user password>" -e JELLYFIN_SERVER="<your jellyfin server address> ghcr.io/akarazniewicz/stremio-jellyfin"
-`
+and then run it:
+
+`docker run -p 60421:60421 -e JELLYFIN_USER="<your jellyfin username>" -e JELLYFIN_PASSWORD="<your jellyfin user password>" -e JELLYFIN_SERVER="<your jellyfin server address>" ghcr.io/akarazniewicz/stremio-jellyfin"`
+
+where:
+* `60421` - is standard port addon is running on (You may remap it in docker)
+* `<your jellyfin username>` - Jellyfin username
+* `<your jellyfin user password>` - Jellyfin password
+* `<your jellyfin server address>` - Jellifin server address and port (`http://aaa.bbb.ccc.ddd:eee`). Make sure Jellyfin is connectable.
+
+You can run it in Your docker environment (like Rancher or Unraid).
 
 Afterwards, add the manifest to Stremio from:
 
